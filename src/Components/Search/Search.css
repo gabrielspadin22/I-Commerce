@@ -1,0 +1,27 @@
+.search_form{
+    margin: 20px;
+    text-align: center;
+}
+.search{
+    display: flex;
+    user-select: none;
+    border-radius: 25px;
+    margin: auto;
+    max-width: fit-content;
+    background-color: white;
+}
+.search input{
+    padding: 0;
+    font-size: 15px;
+    text-align: center;
+}
+.icon_s{
+    cursor:pointer;
+    padding: 0;
+    font-size: 25px;
+}
+.controls{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}

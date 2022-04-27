@@ -1,0 +1,13 @@
+.footer{
+    background-color: rgba(0, 0, 0, 0.688);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+}
+.footer div{
+    margin: auto;
+}

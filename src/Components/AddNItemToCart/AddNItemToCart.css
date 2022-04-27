@@ -1,0 +1,31 @@
+.addtocart_container{
+    display: flex;
+    text-align: center;
+}
+.addtocart_controls{
+    display: flex;
+    margin: auto;
+}
+.add_to_cart_bnt{
+    border: solid 3px #0a142c;
+    background-color: transparent;
+    min-width: max-content;
+    margin: auto;
+    font-size: 20px;
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+}
+.bdr_h{
+    border: solid 3px #0a142c; 
+}
+.bdr_h:hover{
+    border: solid 3px #0d1b3c;
+    color: rgb(66, 66, 66);
+}
+.cntnt {
+    background-color: transparent;
+    font-size: 25px;
+    margin: 20px 8px;
+    border-radius: 10px;
+}

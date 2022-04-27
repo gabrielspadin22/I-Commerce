@@ -1,0 +1,17 @@
+.icons_container{
+    margin: auto;
+    display: flex;
+    padding: 0;
+}
+.icon_nav{
+    font-size: 30px;
+}
+.icons_container li{
+    margin: 10px;
+    list-style: none;
+}
+.icons_container a {
+    color: aliceblue;
+    text-decoration: none;
+    margin: auto;
+}
