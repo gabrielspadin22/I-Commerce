@@ -4,14 +4,11 @@
     padding: 20px;
 }
 .nav-container li{
+    color: aliceblue;
     margin: auto;
     padding: 0;
     list-style-type: none;
     display: flex;
-}
-.nav-container a {
-    color: aliceblue;
-    text-decoration: none;
-    
+    cursor: pointer;
 }
 

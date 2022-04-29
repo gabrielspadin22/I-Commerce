@@ -11,13 +11,12 @@ useEffect(()=> {
     }else{
         resta.removeAttribute("disabled", "");
     };
-    if (cont == stock) {
+    if (cont == stock.units) {
         suma.setAttribute("disabled", "")
     }else{
         suma.removeAttribute("disabled", "");
     }
 },[cont]);
-
     return (
         <div className='addtocart_container'>
             <div className='addtocart_controls'>
@@ -30,5 +29,4 @@ useEffect(()=> {
     );
     
 }
-
 export default AddNItemToCart;

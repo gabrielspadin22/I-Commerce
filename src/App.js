@@ -10,9 +10,9 @@ import Search from './Components/Search/Search';
 import SuperContainer from './Components/SuperContainer/SuperContainer';
 import Content from './Components/Content/Content';
 import AddNItemToCart from './Components/AddNItemToCart/AddNItemToCart';
-import Card from './Components/Card/Card';
+import Item from './Components/Item/Item';
 import Footer from './Components/Footer/Footer';
-let s = Math.floor(Math.random() * 40);
+import ItemList from './Components/ItemList/ItemList';
 function App() {
   return (
     <div className="App">
@@ -24,10 +24,6 @@ function App() {
             <Search />
         </SuperContainer>
         <Content>
-          <Card disponible={s}>
-            <AddNItemToCart stock={s}/>
-          </Card>
-          
         </Content>
         <Footer />
       </header>

@@ -1,0 +1,29 @@
+.item_container{
+    min-width: min-content;
+    max-width: fit-content;
+    text-align: center;
+    background-color: #59595952;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 50px auto;
+}
+.stock{
+    display: block;
+    text-align: center;
+}
+.img_product_container{
+    background-color: white;
+    border-radius: 10px;
+}
+.img_product{
+    max-width: fit-content;
+    border-radius: 10px;
+}
+.shipp{
+    color: rgb(0, 144, 0);
+}
+.product_desc_container{
+    margin-top: 35px;
+    font-size: 30px;
+}
