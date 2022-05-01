@@ -1,23 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import Item from '../Item/Item';
+import Spinner from 'react-bootstrap/Spinner';
 import ItemList from '../ItemList/ItemList';
 function Content({children}) {
-
-
-let [is, setCount] = useState(false);
-
-
-useEffect(()=>{
-        const showProductsPromise = new Promise((resolve, reject)=>{
-            setTimeout(() => {
-                if (is) {
-                    resolve(alert('Aca deberian mostrarse los productos del itemList en el Content.jsx'));
-                }
-            }, 2000);
-        })
-},[is]);
-
-
+    const [products, setProducts] = useState([])
+    const [loading, setloading] = useState([])
+    
+function showProducts() {
+    setloading(<Spinner className='mx-auto my-5' animation="grow" variant="primary" />)
+    const showProductsPromise = new Promise((resolve)=>{
+        setTimeout(() => {
+                resolve(setProducts(productList), setloading(" "));
+        },2000);
+    }) 
+}
 
 let iDProductItem = 0;
 const productList = [
@@ -30,12 +25,10 @@ const productList = [
 ]
 
 
-
     return (
         <div id='content' className='content_container bg_1 shadow1'>
-            <button onClick={()=>{setCount(is = true)}}>Cambiar estado a true</button>
-            <button onClick={()=>{setCount(is = false)}}>Cambiar estado a false</button>
-            <ItemList items={productList}/>
+            <button className='add_to_cart_bnt hover_text_1' onClick={showProducts}>Mostrar productos</button>
+            <ItemList items={products} children={loading}/>
             {children}
         </div>
     );

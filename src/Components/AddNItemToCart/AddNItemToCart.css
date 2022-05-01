@@ -7,25 +7,25 @@
     margin: auto;
 }
 .add_to_cart_bnt{
-    border: solid 3px #0a142c;
+    color: rgb(121, 121, 121);
     background-color: transparent;
     min-width: max-content;
     margin: auto;
     font-size: 20px;
     display: flex;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .bdr_h{
-    border: solid 3px #0a142c; 
+    border: solid 1px #2032fa; 
 }
 .bdr_h:hover{
-    border: solid 3px #0d1b3c;
-    color: rgb(66, 66, 66);
+    border: solid 1px #5462ff;
+    color: rgb(157, 157, 157);
 }
 .cntnt {
     background-color: transparent;
     font-size: 25px;
     margin: 20px 8px;
-    border-radius: 10px;
+    border-radius: 5px;
 }

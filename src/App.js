@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Components/Content/Content.css'
 import './Components/Navbar/Navbar.css'
 import './Components/Search/Search.css'
