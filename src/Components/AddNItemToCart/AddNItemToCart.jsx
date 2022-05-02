@@ -1,29 +1,26 @@
-import React, {useState, Component, useEffect} from 'react';
+import React, {useState} from 'react';
 import './AddNItemToCart.css'
+import Swal from 'sweetalert2'
 
-const AddNItemToCart = ({stock}) => {
-    const [cont, setCount] = useState(0);
-useEffect(()=> {
-    let resta = document.getElementById('resta');
-    let suma = document.getElementById('suma');
-    if (cont == 0) {
-        resta.setAttribute("disabled", "")
-    }else{
-        resta.removeAttribute("disabled", "");
-    };
-    if (cont == stock.units) {
-        suma.setAttribute("disabled", "")
-    }else{
-        suma.removeAttribute("disabled", "");
-    }
-},[cont]);
+const AddNItemToCart = ({stock, initial}) => {
+    const [cont, setCount] = useState(initial);
+    function onAdd(){
+        let resp;
+        cont === 1 ? resp=`añadio ${cont} producto al carrito` : resp=`añadieron ${cont} productos al carrito`;
+        Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: `Se ${resp}`,
+        showConfirmButton: false,
+        timer: 1200
+    })}
     return (
         <div className='addtocart_container'>
             <div className='addtocart_controls'>
-                <button className='add_to_cart_bnt bdr_h'><i className="material-icons">add_shopping_cart</i> Añadir al carro</button>
-                <button id='resta' className='cntnt bdr_h' onClick={()=> {setCount(cont - 1)}}>-</button>
+                <button className='add_to_cart_bnt bdr_h' onClick={onAdd}><i className="material-icons">add_shopping_cart</i> Añadir al carro</button>
+                <button id='resta' className='cntnt bdr_h' onClick={()=> {setCount(cont - 1);}} disabled={cont === 1}>-</button>
                 <div className='cntnt'>{cont}</div>
-                <button id='suma' className='cntnt bdr_h' onClick={()=> {setCount(cont + 1)}}>+</button>
+                <button id='suma' className='cntnt bdr_h' onClick={()=> {setCount(cont + 1);}} disabled={cont === stock}>+</button>
             </div>
         </div>
     );

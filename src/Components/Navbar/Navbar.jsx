@@ -1,5 +1,5 @@
+import './Navbar.css'
 import React from 'react';
-import ItemList from '../ItemList/ItemList';
 function Navbar({children}) {
 
     return (

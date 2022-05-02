@@ -1,6 +1,7 @@
+import './Search.css'
 import React from 'react';
 
-function Seach(props) {
+function Seach() {
     return (
         <form className='search_form' action="">
                 <div className='search '>
