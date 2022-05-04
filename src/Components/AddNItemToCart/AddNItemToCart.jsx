@@ -1,19 +1,20 @@
 import React, {useState} from 'react';
 import './AddNItemToCart.css'
-import Swal from 'sweetalert2'
-
+import Swal from 'sweetalert2';
 const AddNItemToCart = ({stock, initial}) => {
     const [cont, setCount] = useState(initial);
-    function onAdd(){
-        let resp;
-        cont === 1 ? resp=`añadio ${cont} producto al carrito` : resp=`añadieron ${cont} productos al carrito`;
-        Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: `Se ${resp}`,
-        showConfirmButton: false,
-        timer: 1200
-    })}
+    
+function onAdd(){
+    let resp;
+    cont === 1 ? resp=`añadio ${cont} producto al carrito` : resp=`añadieron ${cont} productos al carrito`;
+    Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: `Se ${resp}`,
+    showConfirmButton: false,
+    timer: 1200
+})}
+    
     return (
         <div className='addtocart_container'>
             <div className='addtocart_controls'>
@@ -24,6 +25,5 @@ const AddNItemToCart = ({stock, initial}) => {
             </div>
         </div>
     );
-    
 }
 export default AddNItemToCart;

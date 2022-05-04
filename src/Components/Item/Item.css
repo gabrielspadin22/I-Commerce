@@ -3,10 +3,10 @@
     max-width: fit-content;
     text-align: center;
     background-color: #59595952;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     font-size: 20px;
-    margin: 50px auto;
+    margin: 20px auto;
 }
 .stock{
     display: block;

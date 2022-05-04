@@ -8,9 +8,8 @@ function Item({children, item}) {
             </div>
             <div className='product_desc_container'>{item.title}</div>
             <small>{item.desc}</small>
-            <p>${item.price}</p>
+            <p>${item.newPrice}</p>
             <small className='shipp'>{item.shipp}</small>
-            <small className='stock'>(Disponible {item.units} unidades)</small>
             {children}
         </div>
     );
