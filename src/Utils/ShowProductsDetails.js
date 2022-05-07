@@ -1,7 +1,9 @@
 import productList from './Products'
 
 const  showProductsDetailsPromise = new Promise((resolve)=>{
-            resolve(productList);
+    setTimeout(() => {
+        resolve(productList);
+    }, 2000);        
 })
 
 export default showProductsDetailsPromise;
