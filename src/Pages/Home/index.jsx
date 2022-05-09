@@ -1,10 +1,11 @@
 import React from 'react';
+import Content from '../../Components/Content/Content'
 
-function Home(props) {
+function Home() {
     return (
-        <div>
+        <Content>
             Bienvenidos
-        </div>
+        </Content>
     );
 }
 

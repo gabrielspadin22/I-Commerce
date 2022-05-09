@@ -6,7 +6,7 @@ function ItemList({items}) {
 
     return (
         <ul className='item_list_container' >
-            {items.map(details => <li key={details.id}><Link to={'/products/item/'+ details?.id}><Item item={details}></Item></Link></li>)}        
+            {items.map(details => <li key={details.id}><Link to={`/products/item/${details.id}`}><Item item={details}></Item></Link></li>)}        
         </ul>
     );
 }

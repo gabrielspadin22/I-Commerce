@@ -1,8 +1,11 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './AddNItemToCart.css'
 import Swal from 'sweetalert2';
 const AddNItemToCart = ({stock, initial}) => {
-    const [cont, setCount] = useState(initial);
+    const [cont, setCount] = useState([]);
+    useEffect(()=>{
+        setCount(initial);
+    },[initial])
     
 function onAdd(){
     let resp;
@@ -14,7 +17,7 @@ function onAdd(){
     showConfirmButton: false,
     timer: 1200
 })}
-    
+
     return (
         <div className='addtocart_container'>
             <div className='addtocart_controls'>
