@@ -36,6 +36,13 @@ color: rgb(202, 204, 212);
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.txt_link{
+  text-decoration: none;
+  color: inherit;
+}
+.txt_link:hover {
+  color: rgb(185, 185, 185);
+}
 
 .App-link {
   color: #61dafb;

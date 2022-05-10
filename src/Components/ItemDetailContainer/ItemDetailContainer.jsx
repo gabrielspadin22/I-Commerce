@@ -6,7 +6,6 @@ import './ItemDetailContainer.css'
 
 function ItemdetailContainer() {
     const id = useParams();
-    
     const [detalle, setDetalle] = useState([])
         useEffect(()=>{
             showProductsDetailsPromise.then((res)=>setDetalle(res[id.id]));

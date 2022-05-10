@@ -1,10 +1,10 @@
 import React from 'react';
-
+import Content from '../../Components/Content/Content'
 function Categories(props) {
     return (
-        <div>
-            Categorias
-        </div>
+    <Content>
+        Categorias
+    </Content>
     );
 }
 
