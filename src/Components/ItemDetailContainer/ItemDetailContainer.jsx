@@ -5,10 +5,10 @@ import showProductsDetailsPromise from '../../Utils/ShowProductsDetails'
 import './ItemDetailContainer.css'
 
 function ItemdetailContainer() {
-    const id = useParams();
+    const {id} = useParams();
     const [detalle, setDetalle] = useState([])
         useEffect(()=>{
-            showProductsDetailsPromise.then((res)=>setDetalle(res[id.id]));
+            showProductsDetailsPromise.then((res)=>setDetalle(res[id]));
         },[id])
         
     return (

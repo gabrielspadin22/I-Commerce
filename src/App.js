@@ -27,7 +27,7 @@ function App() {
       </SuperContainer>
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/category' element={<Categories/>} />
+          <Route path='/category/:categoria' element={<Categories/>} />
           <Route path='/products/*' element={<Products/>} />
           <Route path='/products/item/:id' element={<ProductDetails/>} />
           <Route path='/offers' element={<Offers/>} />
