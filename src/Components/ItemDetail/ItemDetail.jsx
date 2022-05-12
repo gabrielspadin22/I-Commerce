@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ItemDetail.css'
 import AddNItemToCart from '../AddNItemToCart/AddNItemToCart';
+import { Link } from 'react-router-dom';
 
 function ItemDetail({detail}) {
+    const [nProductsInCart, setnProductsInCart] = useState(null);
+    function addToCartbtn(nProductsToAdd) {
+        setnProductsInCart(nProductsToAdd);
+        console.log(nProductsInCart);
+    }
+    let r="";
+    nProductsInCart > 1 ? r = "items" : r = "item";
     return (
         <div className='itemDetailContainer'>
             <ul className='itemDetailImg'>
@@ -28,7 +36,10 @@ function ItemDetail({detail}) {
                 <li className='itemdetailhipping itemDetailBuyMargin green'><i className="material-icons ">store</i> Retirar gratis en correos y otros puntos</li>
                 <li className='itemdetailtockAvalible '>Stock disponible:</li>
                 <li className='itemdetailtockAvalible '>{detail.units} disponibles</li>
-                <li className='itemDetailBuyMargin'><AddNItemToCart initial={detail.initial} stock={detail.units}/></li>
+                <li className='itemDetailBuyMargin'>
+                    {nProductsInCart ? <button className='add_to_cart_bnt bdr_h ' ><Link className='txt_link' to='/cart'>Terminar compra ({nProductsInCart}) {r} </Link></button> :
+                    <AddNItemToCart initial={detail.initial} stock={detail.units} onAdd={addToCartbtn}/> }
+                </li>
                 <li className='itemDetailWaranty itemDetailBuyMargin'><i className="material-icons">keyboard_return</i>Devolucion gratis.<small>Tenes hasta 10 dias para devolverlo</small></li>
                 <li className='itemDetailWaranty itemDetailBuyMargin'><i className="material-icons">security</i>Compra protegida.<small>Tenes hasta 10 dias para devolverlo</small></li>
             </ul>

@@ -15,6 +15,7 @@
     display: flex;
     padding: 5px;
     border-radius: 5px;
+    text-decoration: none;
 }
 .bdr_h{
     border: solid 1px #2032fa; 

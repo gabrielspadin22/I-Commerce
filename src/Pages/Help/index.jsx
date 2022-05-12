@@ -1,10 +1,11 @@
 import React from 'react';
+import Content from '../../Components/Content/Content'
 
 function Help(props) {
     return (
-        <div>
-            Ayuda
-        </div>
+    <Content>
+        Ayuda
+    </Content>
     );
 }
 

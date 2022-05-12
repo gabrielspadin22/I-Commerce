@@ -20,6 +20,12 @@ color: rgb(202, 204, 212);
 .hover_bg_1:hover{
   background-color: rgb(202, 204, 212);
 }
+.hover_bg_2:hover{
+  transition: all .3s;
+    box-shadow: -1px 1px 85px -6px rgba(102,163,255,0.75);
+-webkit-box-shadow: -1px 1px 85px -6px rgba(102,163,255,0.75);
+-moz-box-shadow: -1px 1px 85px -6px rgba(102,163,255,0.75);
+}
 .shadow1{
   box-shadow: 10px 10px 29px 0px rgba(0,0,0,0.75);
   -webkit-box-shadow: 10px 10px 29px 0px rgba(0,0,0,0.75);
@@ -36,7 +42,13 @@ color: rgb(202, 204, 212);
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.txt_link{
+  text-decoration: none;
+  color: inherit;
+}
+.txt_link:hover {
+  color: rgb(185, 185, 185);
+}
 .App-link {
   color: #61dafb;
 }
