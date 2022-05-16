@@ -17,6 +17,9 @@ color: rgb(202, 204, 212);
 .hover_text_2:hover{
   color: rgb(119, 119, 119);
 }
+.hover_text_3:hover{
+  color: rgb(87, 138, 220);
+}
 .hover_bg_1:hover{
   background-color: rgb(202, 204, 212);
 }

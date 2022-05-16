@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import './ItemDetail.css'
 import AddNItemToCart from '../AddNItemToCart/AddNItemToCart';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../../Context/CartContextProvider';
 
 function ItemDetail({detail}) {
-    const [nProductsInCart, setnProductsInCart] = useState(null);
+    const { addToCart } = useCartContext();
+    const [nProductsInCart, setnProductsInCart] = useState(0);
+
     function addToCartbtn(nProductsToAdd) {
         setnProductsInCart(nProductsToAdd);
-        console.log(nProductsInCart);
-    }
+        addToCart(detail , nProductsToAdd);
+    };
     let r="";
     nProductsInCart > 1 ? r = "items" : r = "item";
     return (
