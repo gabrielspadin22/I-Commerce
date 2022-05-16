@@ -14,28 +14,31 @@ import Profile from './Pages/Profile/index';
 import Footer from './Components/Footer/Footer';
 import {Routes, Route } from 'react-router-dom'
 import ProductDetails from './Pages/ProductsDetails';
+import CartContextProvider from './Context/CartContextProvider';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header ">
-      <SuperContainer>
-        <Navbar>
-          <CartIcon />
-        </Navbar>
-        <Search />
-      </SuperContainer>
-        <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/category/:categoria' element={<Categories/>} />
-          <Route path='/products/*' element={<Products/>} />
-          <Route path='/products/item/:id' element={<ProductDetails/>} />
-          <Route path='/offers' element={<Offers/>} />
-          <Route path='/cart' element={<Cart/>} />
-          <Route path='/profile' element={<Profile/>} />
-          <Route path='/help' element={<Help/>} />
-        </Routes>
-      <Footer />
+        <CartContextProvider>
+          <SuperContainer>
+            <Navbar>
+              <CartIcon />
+            </Navbar>
+            <Search />
+          </SuperContainer>
+          <Routes>
+            <Route path='/' element={<Home/>} />
+            <Route path='/category/:categoria' element={<Categories/>} />
+            <Route path='/products/*' element={<Products/>} />
+            <Route path='/products/item/:id' element={<ProductDetails/>} />
+            <Route path='/offers' element={<Offers/>} />
+            <Route path='/cart' element={<Cart/>} />
+            <Route path='/profile' element={<Profile/>} />
+            <Route path='/help' element={<Help/>} />
+          </Routes>
+          <Footer />
+        </CartContextProvider>
       </header>
     </div>
 );}
