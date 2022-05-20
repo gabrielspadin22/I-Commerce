@@ -1,4 +1,4 @@
-import productList from './Products'
+/*import productList from './Products'
 
 
     const  showProductsPromise = new Promise((resolve)=>{
@@ -8,3 +8,4 @@ import productList from './Products'
     })
 
 export default showProductsPromise;
+*/

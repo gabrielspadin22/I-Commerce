@@ -16,7 +16,7 @@ console.log(cartList)
                 <button className='mt-3 mb-5 mx-auto d-flex rounded-3 btn-secondary fs-5' onClick={()=> emptyCart()}>Vaciar carrito</button>
                 <button className='my-3 mx-3 rounded-3 ms-auto d-flex text-light btn-primary fs-2 p-1'>Terminar compra</button>
             </div>) : 
-            (<Link className='text-decoration-none text-light' to={`/products`}><div className='text-center fs-1 border rounded'>Carrito vacio</div><p className='text-center fs-5 my-3'>Volver al inicio</p></Link>)}
+            (<Link className='text-decoration-none text-light' to={`/products`}><div className='text-center fs-1 border rounded'>Carrito vacio</div><p className='text-center fs-5 my-3 text-decoration-underline'>Volver al inicio</p></Link>)}
         </Content>
     );
 }

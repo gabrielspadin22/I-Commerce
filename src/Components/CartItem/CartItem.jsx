@@ -13,10 +13,10 @@ const CartItem = ({item}) => {
                 <p className='m-auto text-light'>{item.quantity}</p>
                 <button onClick={() => addByUnit(item.id)} className='m-auto bg-transparent text-light border-0 px-5'>+</button>
             </div>
-            <button onClick={() => deleteById(item.id)} className="m-auto fs-5 bg-transparent text-light border rounded" ><i className="material-icons my-auto">delete</i>Eliminar todo</button>
-            <small className='fs-5 text-success my-auto'>{item.shipp}</small>
+            <small className='fs-5 text-success ms-auto my-auto'>{item.shipp}</small>
             <p className='d-flex m-auto fs-5'>${item.newPrice} c/u</p>
             <p className='d-flex m-auto fs-3'>Total ${item.newPrice*item.quantity}</p>
+            <button onClick={() => deleteById(item.id)} className="m-auto fs-5 bg-transparent text-light border-0" ><i className="material-icons my-auto">delete</i></button>
         </div>
     );
 };
