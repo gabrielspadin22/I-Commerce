@@ -6,6 +6,9 @@
     color: rgb(0, 9, 60);
     border-radius: 20px;
 }
+.itemDetailImg img{
+    width: 15rem;
+}
 .itemDetailBuy{
     border-radius: 25px;
     border: 1px rgba(0, 0, 0, 0.16) solid ;

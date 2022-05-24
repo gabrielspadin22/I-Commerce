@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar({children}) {
+
     return (
             <ul className='nav-container '>
                 <li className='hover_text_1'><Link className='txt_link'to={'/'}>Inicio</Link></li>
