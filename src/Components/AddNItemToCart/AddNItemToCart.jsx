@@ -7,6 +7,7 @@ const AddNItemToCart = ({stock, initial, onAdd}) => {
     useEffect(()=>{
         setCount(initial);
     },[initial])
+    
     function Add(){
         let resp;
         cont === 1 ? resp=`añadio ${cont} producto al carrito` : resp=`añadieron ${cont} productos al carrito`;

@@ -43,8 +43,8 @@ function ItemDetail({detail}) {
                     {nProductsInCart ? <button className='add_to_cart_bnt bdr_h ' ><Link className='txt_link' to='/cart'>Terminar compra ({nProductsInCart}) {r} </Link></button> :
                     <AddNItemToCart initial={detail.initial} stock={detail.units} onAdd={addToCartbtn}/> }
                 </li>
-                <li className='itemDetailWaranty itemDetailBuyMargin'><i className="material-icons">keyboard_return</i>Devolucion gratis.<small>Tenes hasta 10 dias para devolverlo</small></li>
-                <li className='itemDetailWaranty itemDetailBuyMargin'><i className="material-icons">security</i>Compra protegida.<small>Tenes hasta 10 dias para devolverlo</small></li>
+                <li className='itemDetailWaranty itemDetailBuyMargin'><i className="material-icons">keyboard_return</i> Devolucion gratis.<small>Tenes hasta 10 dias para devolverlo</small></li>
+                <li className='itemDetailWaranty itemDetailBuyMargin'><i className="material-icons">security</i><small> Compra protegida por dungaleta secure</small></li>
             </ul>
         </div>
     );

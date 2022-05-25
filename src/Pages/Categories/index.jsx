@@ -2,18 +2,29 @@ import React, {useState, useEffect} from 'react';
 import Content from '../../Components/Content/Content'
 import ItemList from '../../Components/ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import showProductsDetailsPromise from '../../Utils/ShowProductsDetails'
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
 
 function Categories() {
+
     const {categoria} = useParams();
-    const [cate, setcate] = useState([])
-        useEffect(()=>{
-            showProductsDetailsPromise.then((res)=>setcate(res));
-        },[categoria])
-    const categoryFiltered = cate.filter(p => p.categoria === categoria)
+    const [categories, setCategories] = useState([]);
+
+    useEffect(()=>{
+        const db = getFirestore();
+        const itemCollection = collection(db, 'items');
+        const q = query(itemCollection, where('categoria', '==', categoria));
+        getDocs(q)
+        .then(snapshot =>{
+            setCategories(snapshot.docs.map(doc => {
+                return { ...doc.data(), id: doc.id}
+            }));
+        })
+    },[categoria])
+
+    
     return (
     <Content>
-        <ItemList items={categoryFiltered}/>
+        <ItemList items={categories}/>
     </Content>
     );
 }

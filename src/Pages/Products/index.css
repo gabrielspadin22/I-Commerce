@@ -1,0 +1,22 @@
+
+.opt-filter{
+    display: none;
+}
+.opt-filter div{
+    cursor: pointer;
+}
+#filtro{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+.filter-container:hover .opt-filter{
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    display: block;
+    background-color: rgba(12, 12, 63, 0.869);
+}
+.opt-filter div:hover{
+    background-color: rgba(23, 23, 79, 0.869);
+}
