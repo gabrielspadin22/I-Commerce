@@ -1,3 +1,22 @@
+# I-Commerce, Gabriel Padin, proyecto final
+
+E-commerce sobre lenguajes de programacion clasificados en 3 categorias, front-end, back-end y otros.
+
+Utilizados hooks, context, router y firebase para la creacion y almacenamiento de productos y ordenes de compra.
+
+Consta de un "home" donde se visualizan noticias y actualizaciones o publicidades del sitio;
+Un catalogo de "productos" donde se encuentran todos los lenguajes de programacion los cuales se pueden ordenar por precio de mayor a menor o visceversa.
+Una seccion de categorias.
+Un carrito donde se mostraran los productos a comprar y se procedera a la generacion de la orden de compra.
+Un menu de busqueda de orden de compra el cual mostrara los procuctos adquiridos con sus respectivos detalles.
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

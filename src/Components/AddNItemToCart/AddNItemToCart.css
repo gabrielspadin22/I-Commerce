@@ -1,22 +1,4 @@
-.addtocart_container{
-    display: flex;
-    text-align: center;
-}
-.addtocart_controls{
-    display: flex;
-    margin: auto;
-}
-.add_to_cart_bnt{
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    min-width: max-content;
-    margin: auto;
-    font-size: 20px;
-    display: flex;
-    padding: 5px;
-    border-radius: 5px;
-    text-decoration: none;
-}
+
 .bdr_h{
     border: solid 1px #2032fa; 
 }
@@ -24,9 +6,6 @@
     border: solid 1px #5462ff;
     color: rgb(157, 157, 157);
 }
-.cntnt {
-    background-color: transparent;
-    font-size: 25px;
-    margin: 20px 8px;
-    border-radius: 5px;
+.f-auto{
+    font-size: smaller;
 }

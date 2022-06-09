@@ -15,6 +15,7 @@
     cursor:default;
 }
 .category_container{
+    top: 0;
     position: absolute;
     display: none;
     box-shadow: -1px 1px 85px -6px rgba(0,0,0,0.75);
@@ -37,4 +38,3 @@
     color: #FFFFFF;
     background: #001063b9;
 }
-

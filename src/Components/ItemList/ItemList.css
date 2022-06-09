@@ -1,4 +1,5 @@
 .item_list_container{
+    align-items: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     list-style-type: none;

@@ -1,11 +1,10 @@
-.cartItemContainer{
-    background-color: rgba(115, 115, 115, 0.113);
-    padding: 5px;
-    display: flex;
-    border: 1px solid rgb(67, 90, 117);
-    border-radius: 25px;
+.text{
+    font-size: smaller;
 }
-.cartItemContainer img{
-    width: 60px;
-    height: 60px;
+.img{
+    width: 100%;
+    height: auto;
+    min-width: 35px;
+    max-width: 70px;
+    padding: 7px;
 }

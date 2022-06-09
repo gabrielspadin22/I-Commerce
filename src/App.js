@@ -1,8 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './Components/Navbar/Navbar';
 import CartIcon from './Components/CartIcon/CartIcon';
-import Search from './Components/Search/Search';
 import SuperContainer from './Components/SuperContainer/SuperContainer';
 import Home from './Pages/Home/index';
 import Categories from './Pages/Categories/index';
@@ -15,17 +13,18 @@ import Footer from './Components/Footer/Footer';
 import {Routes, Route } from 'react-router-dom'
 import ProductDetails from './Pages/ProductsDetails';
 import CartContextProvider from './Context/CartContextProvider';
-
+import Checkout from './Components/Checkout/Checkout';
+import MyNav from './Components/MyNav/MyNav';
+import CreateItems from './Components/CreateItems/CreateItems';
 function App() {
   return (
     <div className="App">
       <header className="App-header ">
         <CartContextProvider>
           <SuperContainer>
-            <Navbar>
+            <MyNav>
               <CartIcon />
-            </Navbar>
-            <Search />
+            </MyNav>
           </SuperContainer>
           <Routes>
             <Route path='/' element={<Home/>} />
@@ -34,8 +33,10 @@ function App() {
             <Route path='/products/item/:id' element={<ProductDetails/>} />
             <Route path='/offers' element={<Offers/>} />
             <Route path='/cart' element={<Cart/>} />
+            <Route path='/checkout' element={<Checkout/>} />
             <Route path='/profile' element={<Profile/>} />
             <Route path='/help' element={<Help/>} />
+            <Route path='/createproduct' element={<CreateItems/>} />
           </Routes>
           <Footer />
         </CartContextProvider>

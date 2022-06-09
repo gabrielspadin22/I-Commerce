@@ -7,6 +7,7 @@ const AddNItemToCart = ({stock, initial, onAdd}) => {
     useEffect(()=>{
         setCount(initial);
     },[initial])
+    
     function Add(){
         let resp;
         cont === 1 ? resp=`añadio ${cont} producto al carrito` : resp=`añadieron ${cont} productos al carrito`;
@@ -19,14 +20,12 @@ const AddNItemToCart = ({stock, initial, onAdd}) => {
     })}
 
     return (
-        <div className='addtocart_container'>
-            <div className='addtocart_controls'>
-                <button className='add_to_cart_bnt bdr_h' onClick={()=>{Add(); onAdd(cont)}}><i className="material-icons">add_shopping_cart</i> Añadir al carro</button>
-                <button id='resta' className='cntnt bdr_h' onClick={()=> {setCount(cont - 1);}} disabled={cont === 1}>-</button>
-                <div className='cntnt'>{cont}</div>
-                <button id='suma' className='cntnt bdr_h' onClick={()=> {setCount(cont + 1);}} disabled={cont === stock}>+</button>
+            <div className="btn-group p-0" role="group" >
+                <button type="button" className="btn btn-outline-primary mx-auto f-auto" onClick={()=>{Add(); onAdd(cont)}}><i className="material-icons f-auto">add_shopping_cart</i> Añadir al carro</button>
+                <button type="button" className="btn btn-outline-primary ms-auto " onClick={()=>{setCount(cont - 1)}} disabled={cont === 1}>-</button>
+                <div className='text-light fs-2 mx-0 my-auto px-2 text-center'>{cont}</div>
+                <button type="button" className="btn btn-outline-primary me-auto" onClick={()=> {setCount(cont + 1);}} disabled={cont === stock}>+</button>
             </div>
-        </div>
     );
 }
 export default AddNItemToCart;

@@ -1,15 +1,8 @@
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 .bg_1{
-  background-color: #00000052;
+  background-color: #0000007b;
+}
+.bg-dark2{
+  background-color: #141414;
 }
 .hover_text_1:hover{
 color: rgb(202, 204, 212);
@@ -22,6 +15,14 @@ color: rgb(202, 204, 212);
 }
 .hover_bg_1:hover{
   background-color: rgb(202, 204, 212);
+}
+.cube_shadow{
+  box-shadow: 1px -1px 90px 13px rgba(229, 229, 229, 0.318);
+  -webkit-box-shadow: 1px -1px 90px 13px rgb(0, 45, 142);
+  -moz-box-shadow: 1px -1px 90px 13px rgba(0,157,207,0.45);
+}
+.l{
+  list-style-type: none;
 }
 .hover_bg_2:hover{
   transition: all .3s;
@@ -54,13 +55,4 @@ color: rgb(202, 204, 212);
 }
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

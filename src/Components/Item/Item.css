@@ -17,7 +17,8 @@
     border-radius: 10px;
 }
 .img_product{
-    max-width: fit-content;
+    padding: 10px;
+    max-width: 200px;
     border-radius: 10px;
 }
 .shipp{
